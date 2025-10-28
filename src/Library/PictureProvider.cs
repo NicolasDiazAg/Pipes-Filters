@@ -39,7 +39,7 @@ namespace CompAndDel
         public void SavePicture(IPicture picture, string path)
         {
             int width = picture.Width;
-            int height = picture.Height;
+            int height = picture.Height; // no podemos solucionar el problema del rgba32.
             using(Image<Rgba32> image = new Image<Rgba32>(width, height)) // creates a new image with all the pixels set as transparent
             {
                 for (int h = 0; h < picture.Height; h++)
